@@ -1,7 +1,3 @@
-"""Motor de inferência: calcula a compatibilidade (%) entre o perfil do usuário e as trilhas de TI.
-
-O motor não conhece nenhuma carreira. Todo o conhecimento vem do JSON.
-"""
 import json
 from pathlib import Path
 
@@ -9,17 +5,35 @@ CAMINHO_PADRAO = Path(__file__).resolve().parent.parent / "data" / "regras_carre
 
 
 def carregar_base(caminho=CAMINHO_PADRAO):
-    """Lê o JSON da base de conhecimento e devolve um dicionário."""
     with open(caminho, encoding="utf-8") as f:
         return json.load(f)
 
 
-def calcular_pontuacoes(respostas, base):
-    """Soma, para cada trilha, (valor da resposta na escala x peso da pergunta).
+def perguntar(base):
+    escala = base["escala_respostas"]
+    opcoes = sorted(int(k) for k in escala)
+    respostas = {}
 
-    respostas: dict {"Q01": 5, "Q02": 1, ...} (números de 1 a 5).
-    Perguntas sem resposta são ignoradas (equivale a neutro: contribuem com 0).
-    """
+    grupos = sorted(base["grupos"].items(), key=lambda g: g[1]["ordem"])
+    for id_grupo, info_grupo in grupos:
+        print(f"\n=== {info_grupo['titulo']} ===")
+        print(f"Responda de {opcoes[0]} a {opcoes[-1]} ({opcoes[0]} = nada, {opcoes[-1]} = muito)\n")
+
+        for pergunta in base["perguntas"]:
+            if pergunta["grupo"] != id_grupo:
+                continue
+
+            while True:
+                entrada = input(f"[{pergunta['id']}] {pergunta['texto']}\n> ").strip()
+                if entrada.isdigit() and int(entrada) in opcoes:
+                    respostas[pergunta["id"]] = int(entrada)
+                    break
+                print(f"Resposta inválida. Digite um número de {opcoes[0]} a {opcoes[-1]}.\n")
+
+    return respostas
+
+
+def calcular_pontuacoes(respostas, base):
     escala = base["escala_respostas"]
     pontuacoes = {trilha: 0 for trilha in base["trilhas"]}
 
@@ -27,7 +41,7 @@ def calcular_pontuacoes(respostas, base):
         if pergunta["id"] not in respostas:
             continue
 
-        chave = str(respostas[pergunta["id"]])  # JSON só aceita chaves em texto
+        chave = str(respostas[pergunta["id"]])
         if chave not in escala:
             raise ValueError(f"Resposta inválida em {pergunta['id']}: {respostas[pergunta['id']]}")
         valor = escala[chave]
@@ -39,11 +53,6 @@ def calcular_pontuacoes(respostas, base):
 
 
 def calcular_maximos(base):
-    """Pontuação máxima possível de cada trilha.
-
-    Em cada pergunta, escolhe-se a resposta que mais ajuda a trilha:
-    peso positivo -> maior valor da escala; peso negativo -> menor valor.
-    """
     valores = base["escala_respostas"].values()
     maximos = {trilha: 0 for trilha in base["trilhas"]}
 
@@ -55,10 +64,6 @@ def calcular_maximos(base):
 
 
 def normalizar(pontuacoes, maximos):
-    """Converte pontuações em porcentagem (0 a 100) dividindo pelo máximo da trilha.
-
-    Pontuação negativa vira 0%: o perfil é incompatível com a trilha.
-    """
     percentuais = {}
     for trilha, pontos in pontuacoes.items():
         maximo = maximos[trilha]
@@ -67,7 +72,6 @@ def normalizar(pontuacoes, maximos):
 
 
 def gerar_ranking(respostas, base):
-    """Devolve todas as trilhas ordenadas da mais para a menos compatível."""
     pontuacoes = calcular_pontuacoes(respostas, base)
     percentuais = normalizar(pontuacoes, calcular_maximos(base))
 
@@ -75,7 +79,6 @@ def gerar_ranking(respostas, base):
         {"trilha": t, "nome": base["trilhas"][t]["nome"], "percentual": pct, "pontos": pontuacoes[t]}
         for t, pct in percentuais.items()
     ]
-    # Desempate: maior percentual primeiro; se igual, ordem alfabética do nome
     return sorted(ranking, key=lambda r: (-r["percentual"], r["nome"]))
 
 
@@ -87,8 +90,9 @@ if __name__ == "__main__":
     base = carregar_base()
     n = base["parametros"]["top_n"]
 
-    # Perfil de teste: gosta de dados e matemática, não gosta de interface
-    respostas_teste = {"Q01": 5, "Q02": 1, "Q03": 5, "Q04": 5, "Q12": 1, "Q13": 5, "Q14": 4}
+    print("Sistema Especialista de Carreiras em TI")
+    respostas = perguntar(base)
 
-    for i, item in enumerate(top_n(gerar_ranking(respostas_teste, base), n), start=1):
+    print(f"\n=== Suas {n} trilhas mais compatíveis ===")
+    for i, item in enumerate(top_n(gerar_ranking(respostas, base), n), start=1):
         print(f"{i}º {item['nome']} - {item['percentual']}%")
