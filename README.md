@@ -48,6 +48,4 @@ python -m unittest discover -s tests -v
 
 A suíte verifica a base, 1.000 perfis reproduzíveis, perfis ideais e opostos, perfil misto de dados e web, neutralidade, empates, justificativas, níveis, lacunas, prioridade dos estudos, conteúdo exportado e execução em terminal. Os testes de integração do Streamlit percorrem as seis etapas, todas as 10 trilhas, retorno às etapas, troca de trilha, reinício e resultados de iniciante e sênior.
 
-## Entrega
 
-O repositório contém a implementação e os testes. A publicação no GitHub e eventuais exigências de apresentação ou relatório devem ser conferidas separadamente com as orientações da disciplina.
