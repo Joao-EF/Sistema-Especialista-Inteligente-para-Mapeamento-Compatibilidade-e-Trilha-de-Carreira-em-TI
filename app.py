@@ -152,7 +152,11 @@ def etapa_resultado(base):
         item["posicao"] = posicao
     melhores = motor.top_n(ranking, n)
 
-    st.subheader(f"Suas {n} trilhas mais compatíveis")
+    sem_afinidade = ranking[0]["percentual"] == 0
+    st.subheader("Resultado sem afinidade identificada" if sem_afinidade else f"Suas {n} trilhas mais compatíveis")
+    st.caption("Percentuais são índices de aderência às regras, não probabilidades de sucesso profissional.")
+    if sem_afinidade:
+        st.info("Nenhuma trilha obteve pontuação positiva. A ordem abaixo é apenas alfabética; escolha uma área para explorar ou revise suas respostas.")
     colunas = st.columns(n)
     for coluna, item in zip(colunas, melhores):
         coluna.metric(f"{item['posicao']}º lugar", f"{item['percentual']}%", item["nome"], delta_color="off")
@@ -212,11 +216,13 @@ def etapa_resultado(base):
                     st.markdown(f"- {c['texto']} *(sua resposta: {c['resposta']})*")
 
     # escolha da trilha para a avaliação de nível
-    ids_melhores = [m["trilha"] for m in melhores]
+    corte = melhores[-1]["percentual"]
+    candidatas = ranking if sem_afinidade else [r for r in ranking if r["percentual"] >= corte or r in empatadas]
+    ids_melhores = [m["trilha"] for m in candidatas]
     if st.session_state.trilha not in ids_melhores:
         st.session_state.trilha = ids_melhores[0]
         st.session_state.exp = {}
-    nomes_por_id = {m["trilha"]: f"{m['nome']} - {m['percentual']}%" for m in melhores}
+    nomes_por_id = {m["trilha"]: f"{m['nome']} - {m['percentual']}%" for m in candidatas}
 
     st.subheader("Qual trilha você quer aprofundar?")
     st.radio(
@@ -355,7 +361,7 @@ def etapa_plano(base):
 def main():
     try:
         base = carregar_base(str(localizar_base()))
-    except FileNotFoundError as erro:
+    except (FileNotFoundError, ValueError, KeyError) as erro:
         st.error(str(erro))
         st.stop()
 

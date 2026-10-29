@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-CAMINHO_PADRAO = Path(__file__).resolve().parent.parent / "data" / "regras_carreiras.json"
+CAMINHO_PADRAO = Path(__file__).resolve().parent.parent / "data" / "Regras_Carreiras.json"
 
 
 def carregar_base(caminho=CAMINHO_PADRAO):

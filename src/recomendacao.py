@@ -39,23 +39,17 @@ def justificar_trilha(trilha, respostas, base, n=3):
     return a_favor, contra
 
 
-def _tecnologia_ligada_a_lacuna(tecnologia, lacunas):
-    tec = tecnologia.lower()
-    return any(lacuna.lower() in tec or tec in lacuna.lower() for lacuna in lacunas)
-
-
 def gerar_roadmap(trilha, lacunas, base):
-    """Cruza a trilha escolhida com as lacunas e monta as recomendações de estudo."""
+    """Prioriza estudos por relações explícitas na base de conhecimento."""
     info = base["trilhas"][trilha]
-    tecnologias = info["tecnologias"]
-
-    # tecnologias relacionadas às lacunas vêm primeiro
-    priorizadas = [t for t in tecnologias if _tecnologia_ligada_a_lacuna(t, lacunas)]
-    restantes = [t for t in tecnologias if t not in priorizadas]
-
+    estudos = []
+    for pergunta in info["avaliacao_nivel"]:
+        if pergunta.get("skill") in lacunas:
+            estudos.extend(info["estudos_por_competencia"].get(pergunta["id"], [pergunta["skill"]]))
+    priorizadas = list(dict.fromkeys(estudos))
     return {
         "estudar_primeiro": list(lacunas),
-        "tecnologias": priorizadas + restantes,
+        "tecnologias": priorizadas + [t for t in info["tecnologias"] if t not in priorizadas],
         "certificacoes": info["certificacoes"],
         "projetos": info["projetos_portfolio"],
     }
@@ -94,3 +88,4 @@ def plano_em_markdown(trilha, nivel, percentuais, lacunas, roadmap, base, pct_co
     linhas += [f"- {p}" for p in roadmap["projetos"]]
 
     return "\n".join(linhas) + "\n"
+

@@ -1,6 +1,16 @@
 {
-  "parametros": { "top_n": 3, "margem_empate_pct": 5, "limiar_recomendacao_pct": 50 },
-  "escala_respostas": { "1": -2, "2": -1, "3": 0, "4": 1, "5": 2 },
+  "parametros": {
+    "top_n": 3,
+    "margem_empate_pct": 5,
+    "limiar_recomendacao_pct": 50
+  },
+  "escala_respostas": {
+    "1": -2,
+    "2": -1,
+    "3": 0,
+    "4": 1,
+    "5": 2
+  },
   "escala_experiencia": {
     "0": "Nunca fiz ou nunca ouvi falar",
     "1": "Conheço a teoria, mas nunca pratiquei",
@@ -9,204 +19,514 @@
     "4": "Uso com frequência no trabalho ou consigo ensinar outras pessoas"
   },
   "niveis": [
-    { "nome": "Iniciante", "tier": null, "experiencia_minima": 0, "minimo_pct": 0 },
-    { "nome": "Júnior", "tier": "junior", "experiencia_minima": 2, "minimo_pct": 65 },
-    { "nome": "Pleno", "tier": "pleno", "experiencia_minima": 3, "minimo_pct": 65 },
-    { "nome": "Sênior", "tier": "senior", "experiencia_minima": 4, "minimo_pct": 65 }
+    {
+      "nome": "Iniciante",
+      "tier": null,
+      "experiencia_minima": 0,
+      "minimo_pct": 0
+    },
+    {
+      "nome": "Júnior",
+      "tier": "junior",
+      "experiencia_minima": 2,
+      "minimo_pct": 65
+    },
+    {
+      "nome": "Pleno",
+      "tier": "pleno",
+      "experiencia_minima": 3,
+      "minimo_pct": 65
+    },
+    {
+      "nome": "Sênior",
+      "tier": "senior",
+      "experiencia_minima": 4,
+      "minimo_pct": 65
+    }
   ],
   "grupos": {
-    "perfil_pessoal": { "titulo": "Passo 1: Perfil pessoal", "ordem": 1 },
-    "afinidades_tecnicas": { "titulo": "Passo 2: Afinidades técnicas", "ordem": 2 },
-    "objetivos_carreira": { "titulo": "Passo 3: Objetivos de carreira", "ordem": 3 }
+    "perfil_pessoal": {
+      "titulo": "Passo 1: Perfil pessoal",
+      "ordem": 1
+    },
+    "afinidades_tecnicas": {
+      "titulo": "Passo 2: Afinidades técnicas",
+      "ordem": 2
+    },
+    "objetivos_carreira": {
+      "titulo": "Passo 3: Objetivos de carreira",
+      "ordem": 3
+    }
   },
   "perguntas": [
     {
       "id": "Q01",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de resolver problemas utilizando lógica e programação?",
-      "pesos": { "backend": 3, "frontend_ux": 1, "cientista_dados": 2, "engenheiro_dados": 2, "ciberseguranca": 2, "devops_sre": 1, "cloud_architecture": 1, "mobile": 2, "qa": 2 }
+      "pesos": {
+        "backend": 3,
+        "frontend_ux": 1,
+        "cientista_dados": 2,
+        "engenheiro_dados": 2,
+        "ciberseguranca": 2,
+        "devops_sre": 1,
+        "cloud_architecture": 1,
+        "mobile": 2,
+        "qa": 2
+      }
     },
     {
       "id": "Q02",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de criar interfaces visuais, pensar em cores, layouts e na experiência do usuário?",
-      "pesos": { "backend": -1, "frontend_ux": 3, "cientista_dados": -1, "engenheiro_dados": -1, "ciberseguranca": -1, "devops_sre": -1, "cloud_architecture": -1, "mobile": 2, "product_management": 2 }
+      "pesos": {
+        "backend": -1,
+        "frontend_ux": 3,
+        "cientista_dados": -1,
+        "engenheiro_dados": -1,
+        "ciberseguranca": -1,
+        "devops_sre": -1,
+        "cloud_architecture": -1,
+        "mobile": 2,
+        "product_management": 2
+      }
     },
     {
       "id": "Q03",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de matemática, estatística e interpretação de resultados numéricos?",
-      "pesos": { "backend": 1, "cientista_dados": 3, "engenheiro_dados": 2, "ciberseguranca": 1, "cloud_architecture": 1, "qa": 1 }
+      "pesos": {
+        "backend": 1,
+        "cientista_dados": 3,
+        "engenheiro_dados": 2,
+        "ciberseguranca": 1,
+        "cloud_architecture": 1,
+        "qa": 1
+      }
     },
     {
       "id": "Q04",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de organizar, estruturar e trabalhar com grandes volumes de dados?",
-      "pesos": { "backend": 1, "cientista_dados": 2, "engenheiro_dados": 3, "ciberseguranca": 1, "devops_sre": 1, "cloud_architecture": 1, "qa": 1 }
+      "pesos": {
+        "backend": 1,
+        "cientista_dados": 2,
+        "engenheiro_dados": 3,
+        "ciberseguranca": 1,
+        "devops_sre": 1,
+        "cloud_architecture": 1,
+        "qa": 1
+      }
     },
     {
       "id": "Q05",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você se interessa por segurança digital, investigação de vulnerabilidades e prevenção de ataques?",
-      "pesos": { "ciberseguranca": 3, "devops_sre": 1, "cloud_architecture": 2, "qa": 1 }
+      "pesos": {
+        "ciberseguranca": 3,
+        "devops_sre": 1,
+        "cloud_architecture": 2,
+        "qa": 1
+      }
     },
     {
       "id": "Q06",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de configurar sistemas, automatizar tarefas e resolver problemas de infraestrutura?",
-      "pesos": { "backend": 1, "frontend_ux": -1, "engenheiro_dados": 1, "ciberseguranca": 2, "devops_sre": 3, "cloud_architecture": 2, "qa": 2, "product_management": -1 }
+      "pesos": {
+        "backend": 1,
+        "frontend_ux": -1,
+        "engenheiro_dados": 1,
+        "ciberseguranca": 2,
+        "devops_sre": 3,
+        "cloud_architecture": 2,
+        "qa": 2,
+        "product_management": -1
+      }
     },
     {
       "id": "Q07",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você se interessa por computação em nuvem, servidores e arquitetura de sistemas escaláveis?",
-      "pesos": { "cientista_dados": 1, "engenheiro_dados": 2, "ciberseguranca": 1, "devops_sre": 2, "cloud_architecture": 3, "mobile": 1 }
+      "pesos": {
+        "cientista_dados": 1,
+        "engenheiro_dados": 2,
+        "ciberseguranca": 1,
+        "devops_sre": 2,
+        "cloud_architecture": 3,
+        "mobile": 1
+      }
     },
     {
       "id": "Q08",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gostaria de desenvolver aplicativos para celulares e dispositivos móveis?",
-      "pesos": { "backend": 1, "frontend_ux": 2, "mobile": 3, "qa": 1, "product_management": 1 }
+      "pesos": {
+        "backend": 1,
+        "frontend_ux": 2,
+        "mobile": 3,
+        "qa": 1,
+        "product_management": 1
+      }
     },
     {
       "id": "Q09",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de testar programas, encontrar erros e verificar se tudo funciona corretamente?",
-      "pesos": { "backend": 1, "frontend_ux": 1, "cientista_dados": 1, "engenheiro_dados": 1, "ciberseguranca": 2, "devops_sre": 2, "cloud_architecture": 1, "mobile": 1, "qa": 3 }
+      "pesos": {
+        "backend": 1,
+        "frontend_ux": 1,
+        "cientista_dados": 1,
+        "engenheiro_dados": 1,
+        "ciberseguranca": 2,
+        "devops_sre": 2,
+        "cloud_architecture": 1,
+        "mobile": 1,
+        "qa": 3
+      }
     },
     {
       "id": "Q10",
       "grupo": "objetivos_carreira",
       "texto": "Quanto você gosta de planejar produtos, definir prioridades e organizar tarefas de uma equipe?",
-      "pesos": { "devops_sre": 1, "cloud_architecture": 1, "qa": 1, "product_management": 3 }
+      "pesos": {
+        "devops_sre": 1,
+        "cloud_architecture": 1,
+        "qa": 1,
+        "product_management": 3
+      }
     },
     {
       "id": "Q11",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de desenvolver a lógica interna de aplicações, APIs e regras de negócio?",
-      "pesos": { "backend": 3, "frontend_ux": 1, "engenheiro_dados": 1, "ciberseguranca": 1, "devops_sre": 1, "cloud_architecture": 1, "mobile": 2, "qa": 1 }
+      "pesos": {
+        "backend": 3,
+        "frontend_ux": 1,
+        "engenheiro_dados": 1,
+        "ciberseguranca": 1,
+        "devops_sre": 1,
+        "cloud_architecture": 1,
+        "mobile": 2,
+        "qa": 1
+      }
     },
     {
       "id": "Q12",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de pensar na facilidade de uso, acessibilidade e interação das pessoas com um sistema?",
-      "pesos": { "backend": -1, "frontend_ux": 3, "cientista_dados": -1, "engenheiro_dados": -1, "ciberseguranca": -1, "devops_sre": -1, "cloud_architecture": -1, "mobile": 2, "qa": 1, "product_management": 2 }
+      "pesos": {
+        "backend": -1,
+        "frontend_ux": 3,
+        "cientista_dados": -1,
+        "engenheiro_dados": -1,
+        "ciberseguranca": -1,
+        "devops_sre": -1,
+        "cloud_architecture": -1,
+        "mobile": 2,
+        "qa": 1,
+        "product_management": 2
+      }
     },
     {
       "id": "Q13",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você se interessa por inteligência artificial, aprendizado de máquina e identificação de padrões?",
-      "pesos": { "backend": 1, "cientista_dados": 3, "engenheiro_dados": 2, "ciberseguranca": 1, "cloud_architecture": 1 }
+      "pesos": {
+        "backend": 1,
+        "cientista_dados": 3,
+        "engenheiro_dados": 2,
+        "ciberseguranca": 1,
+        "cloud_architecture": 1
+      }
     },
     {
       "id": "Q14",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de integrar diferentes fontes de dados e construir processos para transportar e transformar informações?",
-      "pesos": { "frontend_ux": -1, "cientista_dados": 2, "engenheiro_dados": 3, "devops_sre": 1, "cloud_architecture": 1, "mobile": -1 }
+      "pesos": {
+        "frontend_ux": -1,
+        "cientista_dados": 2,
+        "engenheiro_dados": 3,
+        "devops_sre": 1,
+        "cloud_architecture": 1,
+        "mobile": -1
+      }
     },
     {
       "id": "Q15",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de investigar comportamentos suspeitos, analisar riscos e descobrir as causas de incidentes digitais?",
-      "pesos": { "frontend_ux": -1, "cientista_dados": 1, "ciberseguranca": 3, "devops_sre": 2, "cloud_architecture": 1, "qa": 2 }
+      "pesos": {
+        "frontend_ux": -1,
+        "cientista_dados": 1,
+        "ciberseguranca": 3,
+        "devops_sre": 2,
+        "cloud_architecture": 1,
+        "qa": 2
+      }
     },
     {
       "id": "Q16",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de monitorar sistemas, investigar falhas de disponibilidade e automatizar processos de implantação?",
-      "pesos": { "backend": 1, "frontend_ux": -1, "engenheiro_dados": 1, "ciberseguranca": 1, "devops_sre": 3, "cloud_architecture": 2, "qa": 2 }
+      "pesos": {
+        "backend": 1,
+        "frontend_ux": -1,
+        "engenheiro_dados": 1,
+        "ciberseguranca": 1,
+        "devops_sre": 3,
+        "cloud_architecture": 2,
+        "qa": 2
+      }
     },
     {
       "id": "Q17",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de planejar como diferentes serviços, servidores e componentes de software devem se comunicar?",
-      "pesos": { "backend": 2, "cientista_dados": 1, "engenheiro_dados": 2, "ciberseguranca": 1, "devops_sre": 2, "cloud_architecture": 3, "mobile": 1, "qa": 1, "product_management": 1 }
+      "pesos": {
+        "backend": 2,
+        "cientista_dados": 1,
+        "engenheiro_dados": 2,
+        "ciberseguranca": 1,
+        "devops_sre": 2,
+        "cloud_architecture": 3,
+        "mobile": 1,
+        "qa": 1,
+        "product_management": 1
+      }
     },
     {
       "id": "Q18",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de aprender tecnologias diferentes e adaptar aplicações a telas, sistemas operacionais e dispositivos móveis?",
-      "pesos": { "frontend_ux": 1, "mobile": 3, "qa": 1, "product_management": 1 }
+      "pesos": {
+        "frontend_ux": 1,
+        "mobile": 3,
+        "qa": 1,
+        "product_management": 1
+      }
     },
     {
       "id": "Q19",
       "grupo": "afinidades_tecnicas",
       "texto": "Quanto você gosta de executar testes sistemáticos, reproduzir falhas e verificar situações incomuns ou limites de um sistema?",
-      "pesos": { "backend": 1, "cientista_dados": 1, "engenheiro_dados": 1, "ciberseguranca": 2, "devops_sre": 1, "cloud_architecture": 1, "mobile": 1, "qa": 3 }
+      "pesos": {
+        "backend": 1,
+        "cientista_dados": 1,
+        "engenheiro_dados": 1,
+        "ciberseguranca": 2,
+        "devops_sre": 1,
+        "cloud_architecture": 1,
+        "mobile": 1,
+        "qa": 3
+      }
     },
     {
       "id": "Q20",
       "grupo": "objetivos_carreira",
       "texto": "Quanto você gosta de conversar com usuários, compreender suas necessidades e decidir quais funcionalidades devem ser desenvolvidas primeiro?",
-      "pesos": { "frontend_ux": 1, "mobile": 1, "product_management": 3 }
+      "pesos": {
+        "frontend_ux": 1,
+        "mobile": 1,
+        "product_management": 3
+      }
     },
     {
       "id": "Q21",
       "grupo": "perfil_pessoal",
       "texto": "Quanto você gosta de trabalhar em equipe, conversando e alinhando ideias com outras pessoas ao longo do dia?",
-      "pesos": { "frontend_ux": 1, "devops_sre": 1, "qa": 1, "product_management": 2 }
+      "pesos": {
+        "frontend_ux": 1,
+        "devops_sre": 1,
+        "qa": 1,
+        "product_management": 2
+      }
     },
     {
       "id": "Q22",
       "grupo": "perfil_pessoal",
       "texto": "Quanto você se sente confortável em trabalhar sob pressão e ser acionado em situações de urgência, como incidentes e plantões?",
-      "pesos": { "backend": 1, "ciberseguranca": 2, "devops_sre": 2, "cloud_architecture": 1 }
+      "pesos": {
+        "backend": 1,
+        "ciberseguranca": 2,
+        "devops_sre": 2,
+        "cloud_architecture": 1
+      }
     },
     {
       "id": "Q23",
       "grupo": "perfil_pessoal",
       "texto": "Quanto você gosta de trabalhar com foco profundo e por longos períodos em um único problema complexo?",
-      "pesos": { "backend": 2, "cientista_dados": 2, "engenheiro_dados": 1, "ciberseguranca": 1, "product_management": -2 }
+      "pesos": {
+        "backend": 2,
+        "cientista_dados": 2,
+        "engenheiro_dados": 1,
+        "ciberseguranca": 1,
+        "product_management": -2
+      }
     },
     {
       "id": "Q24",
       "grupo": "perfil_pessoal",
       "texto": "Quanto você gosta de prestar atenção a detalhes e seguir processos bem definidos?",
-      "pesos": { "engenheiro_dados": 1, "ciberseguranca": 1, "devops_sre": 1, "cloud_architecture": 1, "qa": 2 }
+      "pesos": {
+        "engenheiro_dados": 1,
+        "ciberseguranca": 1,
+        "devops_sre": 1,
+        "cloud_architecture": 1,
+        "qa": 2
+      }
     },
     {
       "id": "Q25",
       "grupo": "objetivos_carreira",
       "texto": "Quanto você gostaria de, no futuro, liderar equipes ou tomar decisões estratégicas sobre produtos e tecnologia?",
-      "pesos": { "ciberseguranca": 1, "devops_sre": 1, "cloud_architecture": 2, "product_management": 3 }
+      "pesos": {
+        "ciberseguranca": 1,
+        "devops_sre": 1,
+        "cloud_architecture": 2,
+        "product_management": 3
+      }
     },
     {
       "id": "Q26",
       "grupo": "objetivos_carreira",
       "texto": "Quanto você valoriza ver o resultado do seu trabalho de forma visual e imediata, como uma tela ou um aplicativo funcionando?",
-      "pesos": { "backend": -1, "frontend_ux": 3, "engenheiro_dados": -1, "devops_sre": -1, "mobile": 3, "product_management": 1 }
+      "pesos": {
+        "backend": -1,
+        "frontend_ux": 3,
+        "engenheiro_dados": -1,
+        "devops_sre": -1,
+        "mobile": 3,
+        "product_management": 1
+      }
     },
     {
       "id": "Q27",
       "grupo": "objetivos_carreira",
       "texto": "Quanto você gostaria de trabalhar com pesquisa, experimentos e descoberta de conhecimento a partir de dados?",
-      "pesos": { "frontend_ux": -1, "cientista_dados": 3, "engenheiro_dados": 1, "ciberseguranca": 1 }
+      "pesos": {
+        "frontend_ux": -1,
+        "cientista_dados": 3,
+        "engenheiro_dados": 1,
+        "ciberseguranca": 1
+      }
     }
   ],
   "trilhas": {
     "backend": {
       "nome": "Back-end",
       "descricao": "Constrói a parte invisível das aplicações: APIs, regras de negócio, acesso a banco de dados e integrações entre sistemas.",
-      "skills_junior": ["Lógica de programação", "Git e GitHub", "Python", "Orientação a objetos", "SQL", "APIs REST", "Linux", "Testes automatizados", "Docker"],
-      "tecnologias": ["Python (FastAPI, Django)", "Java (Spring Boot)", "Node.js", "PostgreSQL", "Redis", "Docker"],
-      "certificacoes": ["Python Institute PCAP", "AWS Certified Cloud Practitioner", "Microsoft Azure Developer Associate (AZ-204)"],
+      "skills_junior": [
+        "Lógica de programação",
+        "Git e GitHub",
+        "Python",
+        "Orientação a objetos",
+        "SQL",
+        "APIs REST",
+        "Linux",
+        "Testes automatizados",
+        "Docker"
+      ],
+      "tecnologias": [
+        "Python (FastAPI, Django)",
+        "Java (Spring Boot)",
+        "Node.js",
+        "PostgreSQL",
+        "Redis",
+        "Docker"
+      ],
+      "certificacoes": [
+        "Python Institute PCAP",
+        "AWS Certified Cloud Practitioner",
+        "Microsoft Azure Developer Associate (AZ-204)"
+      ],
       "projetos_portfolio": [
         "API REST de um sistema de tarefas ou biblioteca, com autenticação JWT e banco PostgreSQL",
         "Encurtador de URLs com testes automatizados e documentação Swagger",
         "Sistema de e-commerce simplificado com carrinho, pedidos e deploy via Docker"
       ],
       "avaliacao_nivel": [
-        { "id": "E01", "nivel": "junior", "skill": "Lógica de programação", "texto": "Qual a sua experiência em resolver problemas com estruturas de repetição, condicionais, funções e estruturas de dados (listas e dicionários)?" },
-        { "id": "E02", "nivel": "junior", "skill": "Git e GitHub", "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?" },
-        { "id": "E03", "nivel": "junior", "skill": "Python", "texto": "Qual a sua experiência em programar em Python, construindo programas completos com módulos e bibliotecas?" },
-        { "id": "E04", "nivel": "junior", "skill": "Orientação a objetos", "texto": "Qual a sua experiência em modelar sistemas com classes, herança, encapsulamento e polimorfismo?" },
-        { "id": "E05", "nivel": "junior", "skill": "SQL", "texto": "Qual a sua experiência em criar tabelas e escrever consultas SQL com JOIN, filtros e agregações?" },
-        { "id": "E06", "nivel": "junior", "skill": "APIs REST", "texto": "Qual a sua experiência em criar ou consumir APIs REST (rotas, métodos HTTP, JSON e códigos de status)?" },
-        { "id": "E07", "nivel": "pleno", "texto": "Qual a sua experiência em escrever testes automatizados (unitários e de integração) para o código que você produz?" },
-        { "id": "E08", "nivel": "pleno", "texto": "Qual a sua experiência em empacotar e executar aplicações com Docker e usar o Linux pelo terminal no dia a dia?" },
-        { "id": "E09", "nivel": "senior", "texto": "Qual a sua experiência em projetar a arquitetura de sistemas com várias camadas ou serviços, considerando escalabilidade, cache e desempenho?" },
-        { "id": "E10", "nivel": "senior", "texto": "Qual a sua experiência em liderar revisões de código, definir padrões técnicos e orientar desenvolvedores menos experientes?" }
-      ]
+        {
+          "id": "E01",
+          "nivel": "junior",
+          "skill": "Lógica de programação",
+          "texto": "Qual a sua experiência em resolver problemas com estruturas de repetição, condicionais, funções e estruturas de dados (listas e dicionários)?"
+        },
+        {
+          "id": "E02",
+          "nivel": "junior",
+          "skill": "Git e GitHub",
+          "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?"
+        },
+        {
+          "id": "E03",
+          "nivel": "junior",
+          "skill": "Python",
+          "texto": "Qual a sua experiência em programar em Python, construindo programas completos com módulos e bibliotecas?"
+        },
+        {
+          "id": "E04",
+          "nivel": "junior",
+          "skill": "Orientação a objetos",
+          "texto": "Qual a sua experiência em modelar sistemas com classes, herança, encapsulamento e polimorfismo?"
+        },
+        {
+          "id": "E05",
+          "nivel": "junior",
+          "skill": "SQL",
+          "texto": "Qual a sua experiência em criar tabelas e escrever consultas SQL com JOIN, filtros e agregações?"
+        },
+        {
+          "id": "E06",
+          "nivel": "junior",
+          "skill": "APIs REST",
+          "texto": "Qual a sua experiência em criar ou consumir APIs REST (rotas, métodos HTTP, JSON e códigos de status)?"
+        },
+        {
+          "id": "E07",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em escrever testes automatizados (unitários e de integração) para o código que você produz?"
+        },
+        {
+          "id": "E08",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em empacotar e executar aplicações com Docker e usar o Linux pelo terminal no dia a dia?"
+        },
+        {
+          "id": "E09",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em projetar a arquitetura de sistemas com várias camadas ou serviços, considerando escalabilidade, cache e desempenho?"
+        },
+        {
+          "id": "E10",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em liderar revisões de código, definir padrões técnicos e orientar desenvolvedores menos experientes?"
+        }
+      ],
+      "estudos_por_competencia": {
+        "E01": [
+          "Python (FastAPI, Django)"
+        ],
+        "E02": [
+          "Git e GitHub"
+        ],
+        "E03": [
+          "Python (FastAPI, Django)"
+        ],
+        "E04": [
+          "Python (FastAPI, Django)",
+          "Java (Spring Boot)"
+        ],
+        "E05": [
+          "PostgreSQL"
+        ],
+        "E06": [
+          "Python (FastAPI, Django)",
+          "Node.js"
+        ]
+      }
     },
     "frontend_ux": {
       "nome": "Front-end / UX",
@@ -222,25 +542,105 @@
         "Acessibilidade web",
         "APIs REST"
       ],
-      "tecnologias": ["HTML5", "CSS3 (Flexbox e Grid)", "JavaScript e TypeScript", "React", "Figma", "Tailwind CSS"],
-      "certificacoes": ["Meta Front-End Developer Professional Certificate", "Google UX Design Professional Certificate", "freeCodeCamp Responsive Web Design"],
+      "tecnologias": [
+        "HTML5",
+        "CSS3 (Flexbox e Grid)",
+        "JavaScript e TypeScript",
+        "React",
+        "Figma",
+        "Tailwind CSS"
+      ],
+      "certificacoes": [
+        "Meta Front-End Developer Professional Certificate",
+        "Google UX Design Professional Certificate",
+        "freeCodeCamp Responsive Web Design"
+      ],
       "projetos_portfolio": [
         "Landing page responsiva e acessível de um produto fictício",
         "Aplicação React consumindo uma API pública (ex: clima ou filmes)",
         "Estudo de caso de UX: pesquisa, protótipo no Figma e teste de usabilidade com 5 pessoas"
       ],
       "avaliacao_nivel": [
-        { "id": "E01", "nivel": "junior", "skill": "Lógica de programação", "texto": "Qual a sua experiência em resolver problemas com estruturas de repetição, condicionais, funções e estruturas de dados?" },
-        { "id": "E02", "nivel": "junior", "skill": "Git e GitHub", "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?" },
-        { "id": "E03", "nivel": "junior", "skill": "HTML e CSS", "texto": "Qual a sua experiência em construir páginas com HTML semântico e CSS (Flexbox e Grid)?" },
-        { "id": "E04", "nivel": "junior", "skill": "JavaScript", "texto": "Qual a sua experiência em programar interações em JavaScript (manipulação do DOM, eventos e requisições assíncronas)?" },
-        { "id": "E05", "nivel": "junior", "skill": "Design responsivo", "texto": "Qual a sua experiência em criar layouts que se adaptam a celulares, tablets e computadores?" },
-        { "id": "E06", "nivel": "junior", "skill": "Prototipação no Figma", "texto": "Qual a sua experiência em criar protótipos e fluxos de telas no Figma ou em ferramenta similar?" },
-        { "id": "E07", "nivel": "pleno", "texto": "Qual a sua experiência em construir aplicações com React ou outro framework (componentes, estado e consumo de APIs)?" },
-        { "id": "E08", "nivel": "pleno", "texto": "Qual a sua experiência em aplicar acessibilidade (WCAG, semântica e navegação por teclado) e testar com leitores de tela?" },
-        { "id": "E09", "nivel": "senior", "texto": "Qual a sua experiência em estruturar um design system ou uma biblioteca de componentes reutilizáveis para uma equipe?" },
-        { "id": "E10", "nivel": "senior", "texto": "Qual a sua experiência em otimizar o desempenho de aplicações web (carregamento, renderização e Core Web Vitals) e conduzir testes de usabilidade?" }
-      ]
+        {
+          "id": "E01",
+          "nivel": "junior",
+          "skill": "Lógica de programação",
+          "texto": "Qual a sua experiência em resolver problemas com estruturas de repetição, condicionais, funções e estruturas de dados?"
+        },
+        {
+          "id": "E02",
+          "nivel": "junior",
+          "skill": "Git e GitHub",
+          "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?"
+        },
+        {
+          "id": "E03",
+          "nivel": "junior",
+          "skill": "HTML e CSS",
+          "texto": "Qual a sua experiência em construir páginas com HTML semântico e CSS (Flexbox e Grid)?"
+        },
+        {
+          "id": "E04",
+          "nivel": "junior",
+          "skill": "JavaScript",
+          "texto": "Qual a sua experiência em programar interações em JavaScript (manipulação do DOM, eventos e requisições assíncronas)?"
+        },
+        {
+          "id": "E05",
+          "nivel": "junior",
+          "skill": "Design responsivo",
+          "texto": "Qual a sua experiência em criar layouts que se adaptam a celulares, tablets e computadores?"
+        },
+        {
+          "id": "E06",
+          "nivel": "junior",
+          "skill": "Prototipação no Figma",
+          "texto": "Qual a sua experiência em criar protótipos e fluxos de telas no Figma ou em ferramenta similar?"
+        },
+        {
+          "id": "E07",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em construir aplicações com React ou outro framework (componentes, estado e consumo de APIs)?"
+        },
+        {
+          "id": "E08",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em aplicar acessibilidade (WCAG, semântica e navegação por teclado) e testar com leitores de tela?"
+        },
+        {
+          "id": "E09",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em estruturar um design system ou uma biblioteca de componentes reutilizáveis para uma equipe?"
+        },
+        {
+          "id": "E10",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em otimizar o desempenho de aplicações web (carregamento, renderização e Core Web Vitals) e conduzir testes de usabilidade?"
+        }
+      ],
+      "estudos_por_competencia": {
+        "E01": [
+          "JavaScript e TypeScript"
+        ],
+        "E02": [
+          "Git e GitHub"
+        ],
+        "E03": [
+          "HTML5",
+          "CSS3 (Flexbox e Grid)"
+        ],
+        "E04": [
+          "JavaScript e TypeScript",
+          "React"
+        ],
+        "E05": [
+          "CSS3 (Flexbox e Grid)",
+          "Tailwind CSS"
+        ],
+        "E06": [
+          "Figma"
+        ]
+      }
     },
     "cientista_dados": {
       "nome": "Cientista de Dados",
@@ -256,49 +656,220 @@
         "Git e GitHub",
         "Machine Learning básico"
       ],
-      "tecnologias": ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib e Plotly", "Jupyter", "SQL"],
-      "certificacoes": ["IBM Data Science Professional Certificate", "Google Data Analytics Professional Certificate", "Microsoft Azure Data Scientist Associate (DP-100)"],
+      "tecnologias": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "Matplotlib e Plotly",
+        "Jupyter",
+        "SQL"
+      ],
+      "certificacoes": [
+        "IBM Data Science Professional Certificate",
+        "Google Data Analytics Professional Certificate",
+        "Microsoft Azure Data Scientist Associate (DP-100)"
+      ],
       "projetos_portfolio": [
         "Análise exploratória de um dataset público do Kaggle com conclusões escritas",
         "Modelo de previsão (ex: preço de imóveis ou churn de clientes) com métricas de avaliação",
         "Dashboard interativo em Streamlit com os resultados de uma análise"
       ],
       "avaliacao_nivel": [
-        { "id": "E01", "nivel": "junior", "skill": "Lógica de programação", "texto": "Qual a sua experiência em resolver problemas com estruturas de repetição, condicionais, funções e estruturas de dados?" },
-        { "id": "E02", "nivel": "junior", "skill": "Python", "texto": "Qual a sua experiência em programar em Python, construindo scripts e análises completas?" },
-        { "id": "E03", "nivel": "junior", "skill": "Estatística", "texto": "Qual a sua experiência em aplicar estatística (média, desvio padrão, correlação, distribuições e testes de hipótese)?" },
-        { "id": "E04", "nivel": "junior", "skill": "SQL", "texto": "Qual a sua experiência em escrever consultas SQL com JOIN, filtros e agregações para obter dados de análise?" },
-        { "id": "E05", "nivel": "junior", "skill": "Pandas e NumPy", "texto": "Qual a sua experiência em manipular, limpar e transformar dados com Pandas e NumPy?" },
-        { "id": "E06", "nivel": "junior", "skill": "Visualização de dados", "texto": "Qual a sua experiência em criar gráficos e dashboards claros (Matplotlib, Plotly, Power BI ou similar)?" },
-        { "id": "E07", "nivel": "pleno", "texto": "Qual a sua experiência em treinar e avaliar modelos de Machine Learning (Scikit-learn) com validação cruzada e métricas adequadas?" },
-        { "id": "E08", "nivel": "pleno", "texto": "Qual a sua experiência em preparar dados de ponta a ponta: tratar valores nulos, remover outliers e criar novos atributos?" },
-        { "id": "E09", "nivel": "senior", "texto": "Qual a sua experiência em levar um modelo para produção e monitorar seu desempenho ao longo do tempo?" },
-        { "id": "E10", "nivel": "senior", "texto": "Qual a sua experiência em traduzir problemas de negócio em hipóteses e experimentos (como testes A/B) e apresentar conclusões a gestores?" }
-      ]
+        {
+          "id": "E01",
+          "nivel": "junior",
+          "skill": "Lógica de programação",
+          "texto": "Qual a sua experiência em resolver problemas com estruturas de repetição, condicionais, funções e estruturas de dados?"
+        },
+        {
+          "id": "E02",
+          "nivel": "junior",
+          "skill": "Python",
+          "texto": "Qual a sua experiência em programar em Python, construindo scripts e análises completas?"
+        },
+        {
+          "id": "E03",
+          "nivel": "junior",
+          "skill": "Estatística",
+          "texto": "Qual a sua experiência em aplicar estatística (média, desvio padrão, correlação, distribuições e testes de hipótese)?"
+        },
+        {
+          "id": "E04",
+          "nivel": "junior",
+          "skill": "SQL",
+          "texto": "Qual a sua experiência em escrever consultas SQL com JOIN, filtros e agregações para obter dados de análise?"
+        },
+        {
+          "id": "E05",
+          "nivel": "junior",
+          "skill": "Pandas e NumPy",
+          "texto": "Qual a sua experiência em manipular, limpar e transformar dados com Pandas e NumPy?"
+        },
+        {
+          "id": "E06",
+          "nivel": "junior",
+          "skill": "Visualização de dados",
+          "texto": "Qual a sua experiência em criar gráficos e dashboards claros (Matplotlib, Plotly, Power BI ou similar)?"
+        },
+        {
+          "id": "E07",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em treinar e avaliar modelos de Machine Learning (Scikit-learn) com validação cruzada e métricas adequadas?"
+        },
+        {
+          "id": "E08",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em preparar dados de ponta a ponta: tratar valores nulos, remover outliers e criar novos atributos?"
+        },
+        {
+          "id": "E09",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em levar um modelo para produção e monitorar seu desempenho ao longo do tempo?"
+        },
+        {
+          "id": "E10",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em traduzir problemas de negócio em hipóteses e experimentos (como testes A/B) e apresentar conclusões a gestores?"
+        }
+      ],
+      "estudos_por_competencia": {
+        "E01": [
+          "Python"
+        ],
+        "E02": [
+          "Python"
+        ],
+        "E03": [
+          "NumPy",
+          "Scikit-learn"
+        ],
+        "E04": [
+          "SQL"
+        ],
+        "E05": [
+          "Pandas",
+          "NumPy"
+        ],
+        "E06": [
+          "Matplotlib e Plotly",
+          "Jupyter"
+        ]
+      }
     },
     "engenheiro_dados": {
       "nome": "Engenheiro de Dados",
       "descricao": "Projeta e mantém os pipelines e a infraestrutura que coletam, transformam e entregam dados confiáveis para análise e modelos.",
-      "skills_junior": ["Lógica de programação", "SQL", "Python", "Git e GitHub", "Modelagem de dados", "Linux", "ETL e pipelines de dados", "Docker", "Apache Spark"],
-      "tecnologias": ["SQL", "Python", "Apache Airflow", "Apache Spark", "dbt", "PostgreSQL", "Data Lakes e Data Warehouses"],
-      "certificacoes": ["Databricks Certified Data Engineer Associate", "AWS Certified Data Engineer - Associate", "Google Cloud Professional Data Engineer"],
+      "skills_junior": [
+        "Lógica de programação",
+        "SQL",
+        "Python",
+        "Git e GitHub",
+        "Modelagem de dados",
+        "Linux",
+        "ETL e pipelines de dados",
+        "Docker",
+        "Apache Spark"
+      ],
+      "tecnologias": [
+        "SQL",
+        "Python",
+        "Apache Airflow",
+        "Apache Spark",
+        "dbt",
+        "PostgreSQL",
+        "Data Lakes e Data Warehouses"
+      ],
+      "certificacoes": [
+        "Databricks Certified Data Engineer Associate",
+        "AWS Certified Data Engineer - Associate",
+        "Google Cloud Professional Data Engineer"
+      ],
       "projetos_portfolio": [
         "Pipeline ETL que coleta dados de uma API pública e grava em PostgreSQL",
         "Orquestração diária de um pipeline com Apache Airflow rodando em Docker",
         "Modelagem de um Data Warehouse (esquema estrela) com consultas analíticas"
       ],
       "avaliacao_nivel": [
-        { "id": "E01", "nivel": "junior", "skill": "Lógica de programação", "texto": "Qual a sua experiência em resolver problemas com estruturas de repetição, condicionais, funções e estruturas de dados?" },
-        { "id": "E02", "nivel": "junior", "skill": "SQL", "texto": "Qual a sua experiência em escrever consultas SQL avançadas (JOIN, subconsultas e funções de janela)?" },
-        { "id": "E03", "nivel": "junior", "skill": "Python", "texto": "Qual a sua experiência em programar em Python para ler, transformar e gravar dados?" },
-        { "id": "E04", "nivel": "junior", "skill": "Git e GitHub", "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?" },
-        { "id": "E05", "nivel": "junior", "skill": "Modelagem de dados", "texto": "Qual a sua experiência em modelar bancos de dados (entidade-relacionamento, normalização e esquema estrela)?" },
-        { "id": "E06", "nivel": "junior", "skill": "Linux", "texto": "Qual a sua experiência em usar o Linux pelo terminal para navegar, manipular arquivos e executar scripts?" },
-        { "id": "E07", "nivel": "pleno", "texto": "Qual a sua experiência em construir pipelines ETL ou ELT automatizados e agendados (Airflow ou similar)?" },
-        { "id": "E08", "nivel": "pleno", "texto": "Qual a sua experiência em processar grandes volumes de dados com Apache Spark ou outra ferramenta distribuída?" },
-        { "id": "E09", "nivel": "senior", "texto": "Qual a sua experiência em projetar a arquitetura de dados (Data Lake ou Data Warehouse) com governança, qualidade e controle de custos?" },
-        { "id": "E10", "nivel": "senior", "texto": "Qual a sua experiência em garantir a confiabilidade de pipelines críticos com monitoramento e testes de dados e orientar a equipe?" }
-      ]
+        {
+          "id": "E01",
+          "nivel": "junior",
+          "skill": "Lógica de programação",
+          "texto": "Qual a sua experiência em resolver problemas com estruturas de repetição, condicionais, funções e estruturas de dados?"
+        },
+        {
+          "id": "E02",
+          "nivel": "junior",
+          "skill": "SQL",
+          "texto": "Qual a sua experiência em escrever consultas SQL avançadas (JOIN, subconsultas e funções de janela)?"
+        },
+        {
+          "id": "E03",
+          "nivel": "junior",
+          "skill": "Python",
+          "texto": "Qual a sua experiência em programar em Python para ler, transformar e gravar dados?"
+        },
+        {
+          "id": "E04",
+          "nivel": "junior",
+          "skill": "Git e GitHub",
+          "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?"
+        },
+        {
+          "id": "E05",
+          "nivel": "junior",
+          "skill": "Modelagem de dados",
+          "texto": "Qual a sua experiência em modelar bancos de dados (entidade-relacionamento, normalização e esquema estrela)?"
+        },
+        {
+          "id": "E06",
+          "nivel": "junior",
+          "skill": "Linux",
+          "texto": "Qual a sua experiência em usar o Linux pelo terminal para navegar, manipular arquivos e executar scripts?"
+        },
+        {
+          "id": "E07",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em construir pipelines ETL ou ELT automatizados e agendados (Airflow ou similar)?"
+        },
+        {
+          "id": "E08",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em processar grandes volumes de dados com Apache Spark ou outra ferramenta distribuída?"
+        },
+        {
+          "id": "E09",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em projetar a arquitetura de dados (Data Lake ou Data Warehouse) com governança, qualidade e controle de custos?"
+        },
+        {
+          "id": "E10",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em garantir a confiabilidade de pipelines críticos com monitoramento e testes de dados e orientar a equipe?"
+        }
+      ],
+      "estudos_por_competencia": {
+        "E01": [
+          "Python"
+        ],
+        "E02": [
+          "SQL",
+          "PostgreSQL"
+        ],
+        "E03": [
+          "Python"
+        ],
+        "E04": [
+          "Git e GitHub"
+        ],
+        "E05": [
+          "PostgreSQL",
+          "Data Lakes e Data Warehouses"
+        ],
+        "E06": [
+          "Linux"
+        ]
+      }
     },
     "ciberseguranca": {
       "nome": "Cibersegurança",
@@ -314,25 +885,103 @@
         "Análise de logs",
         "Git e GitHub"
       ],
-      "tecnologias": ["Wireshark", "Nmap", "Kali Linux", "Burp Suite", "SIEM (Splunk, Wazuh)", "Python para automação"],
-      "certificacoes": ["CompTIA Security+", "ISC2 Certified in Cybersecurity (CC)", "eJPT (eLearnSecurity Junior Penetration Tester)"],
+      "tecnologias": [
+        "Wireshark",
+        "Nmap",
+        "Kali Linux",
+        "Burp Suite",
+        "SIEM (Splunk, Wazuh)",
+        "Python para automação"
+      ],
+      "certificacoes": [
+        "CompTIA Security+",
+        "ISC2 Certified in Cybersecurity (CC)",
+        "eJPT (eLearnSecurity Junior Penetration Tester)"
+      ],
       "projetos_portfolio": [
         "Laboratório caseiro de pentest com máquinas vulneráveis (ex: DVWA, Metasploitable) e relatório das falhas",
         "Resolução documentada de desafios de CTF (Capture The Flag), publicados em um blog ou repositório",
         "Ferramenta em Python que analisa logs e detecta tentativas de acesso suspeitas"
       ],
       "avaliacao_nivel": [
-        { "id": "E01", "nivel": "junior", "skill": "Redes de computadores", "texto": "Qual a sua experiência em configurar e analisar redes (TCP/IP, DNS, HTTP, portas e firewalls)?" },
-        { "id": "E02", "nivel": "junior", "skill": "Linux", "texto": "Qual a sua experiência em usar o Linux pelo terminal, gerenciando usuários, permissões e serviços?" },
-        { "id": "E03", "nivel": "junior", "skill": "Fundamentos de segurança da informação", "texto": "Qual a sua experiência em aplicar conceitos de segurança (confidencialidade, integridade, disponibilidade e controle de acesso)?" },
-        { "id": "E04", "nivel": "junior", "skill": "Python", "texto": "Qual a sua experiência em programar em Python para automatizar tarefas e analisar dados de segurança?" },
-        { "id": "E05", "nivel": "junior", "skill": "Criptografia básica", "texto": "Qual a sua experiência em usar criptografia (hash, chaves simétricas e assimétricas, certificados e TLS)?" },
-        { "id": "E06", "nivel": "junior", "skill": "OWASP Top 10", "texto": "Qual a sua experiência em identificar e corrigir as vulnerabilidades do OWASP Top 10 em aplicações web?" },
-        { "id": "E07", "nivel": "pleno", "texto": "Qual a sua experiência em analisar logs e alertas em uma ferramenta de monitoramento (SIEM ou similar) para identificar atividades suspeitas?" },
-        { "id": "E08", "nivel": "pleno", "texto": "Qual a sua experiência em realizar testes de invasão em ambientes autorizados (Nmap, Burp Suite ou Metasploit) e documentar as vulnerabilidades?" },
-        { "id": "E09", "nivel": "senior", "texto": "Qual a sua experiência em conduzir a resposta a incidentes, da contenção à análise de causa raiz e ao relatório final?" },
-        { "id": "E10", "nivel": "senior", "texto": "Qual a sua experiência em definir políticas, arquitetura de segurança e controles de conformidade (ISO 27001 e LGPD)?" }
-      ]
+        {
+          "id": "E01",
+          "nivel": "junior",
+          "skill": "Redes de computadores",
+          "texto": "Qual a sua experiência em configurar e analisar redes (TCP/IP, DNS, HTTP, portas e firewalls)?"
+        },
+        {
+          "id": "E02",
+          "nivel": "junior",
+          "skill": "Linux",
+          "texto": "Qual a sua experiência em usar o Linux pelo terminal, gerenciando usuários, permissões e serviços?"
+        },
+        {
+          "id": "E03",
+          "nivel": "junior",
+          "skill": "Fundamentos de segurança da informação",
+          "texto": "Qual a sua experiência em aplicar conceitos de segurança (confidencialidade, integridade, disponibilidade e controle de acesso)?"
+        },
+        {
+          "id": "E04",
+          "nivel": "junior",
+          "skill": "Python",
+          "texto": "Qual a sua experiência em programar em Python para automatizar tarefas e analisar dados de segurança?"
+        },
+        {
+          "id": "E05",
+          "nivel": "junior",
+          "skill": "Criptografia básica",
+          "texto": "Qual a sua experiência em usar criptografia (hash, chaves simétricas e assimétricas, certificados e TLS)?"
+        },
+        {
+          "id": "E06",
+          "nivel": "junior",
+          "skill": "OWASP Top 10",
+          "texto": "Qual a sua experiência em identificar e corrigir as vulnerabilidades do OWASP Top 10 em aplicações web?"
+        },
+        {
+          "id": "E07",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em analisar logs e alertas em uma ferramenta de monitoramento (SIEM ou similar) para identificar atividades suspeitas?"
+        },
+        {
+          "id": "E08",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em realizar testes de invasão em ambientes autorizados (Nmap, Burp Suite ou Metasploit) e documentar as vulnerabilidades?"
+        },
+        {
+          "id": "E09",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em conduzir a resposta a incidentes, da contenção à análise de causa raiz e ao relatório final?"
+        },
+        {
+          "id": "E10",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em definir políticas, arquitetura de segurança e controles de conformidade (ISO 27001 e LGPD)?"
+        }
+      ],
+      "estudos_por_competencia": {
+        "E01": [
+          "Wireshark",
+          "Nmap"
+        ],
+        "E02": [
+          "Kali Linux"
+        ],
+        "E03": [
+          "SIEM (Splunk, Wazuh)"
+        ],
+        "E04": [
+          "Python para automação"
+        ],
+        "E05": [
+          "Criptografia básica"
+        ],
+        "E06": [
+          "Burp Suite"
+        ]
+      }
     },
     "devops_sre": {
       "nome": "DevOps / SRE",
@@ -348,25 +997,103 @@
         "Monitoramento e observabilidade",
         "Infraestrutura como código"
       ],
-      "tecnologias": ["Linux", "Docker", "Kubernetes", "GitHub Actions", "Terraform", "Prometheus e Grafana", "Bash"],
-      "certificacoes": ["Linux Foundation Certified System Administrator (LFCS)", "HashiCorp Terraform Associate", "Certified Kubernetes Administrator (CKA)"],
+      "tecnologias": [
+        "Linux",
+        "Docker",
+        "Kubernetes",
+        "GitHub Actions",
+        "Terraform",
+        "Prometheus e Grafana",
+        "Bash"
+      ],
+      "certificacoes": [
+        "Linux Foundation Certified System Administrator (LFCS)",
+        "HashiCorp Terraform Associate",
+        "Certified Kubernetes Administrator (CKA)"
+      ],
       "projetos_portfolio": [
         "Pipeline CI/CD no GitHub Actions que testa, constrói e publica uma aplicação em container",
         "Infraestrutura provisionada com Terraform, versionada no repositório",
         "Painel de monitoramento com Prometheus e Grafana para uma aplicação de exemplo"
       ],
       "avaliacao_nivel": [
-        { "id": "E01", "nivel": "junior", "skill": "Linux", "texto": "Qual a sua experiência em administrar servidores Linux (permissões, processos, serviços e logs)?" },
-        { "id": "E02", "nivel": "junior", "skill": "Redes de computadores", "texto": "Qual a sua experiência em configurar e diagnosticar redes (TCP/IP, DNS, HTTP, portas e firewalls)?" },
-        { "id": "E03", "nivel": "junior", "skill": "Git e GitHub", "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?" },
-        { "id": "E04", "nivel": "junior", "skill": "Shell script", "texto": "Qual a sua experiência em automatizar tarefas com scripts em Bash ou PowerShell?" },
-        { "id": "E05", "nivel": "junior", "skill": "Docker", "texto": "Qual a sua experiência em criar imagens e executar aplicações em containers com Docker?" },
-        { "id": "E06", "nivel": "junior", "skill": "CI/CD", "texto": "Qual a sua experiência em montar pipelines de integração e entrega contínua (GitHub Actions, GitLab CI ou Jenkins)?" },
-        { "id": "E07", "nivel": "pleno", "texto": "Qual a sua experiência em provisionar infraestrutura como código (Terraform, Ansible ou similar)?" },
-        { "id": "E08", "nivel": "pleno", "texto": "Qual a sua experiência em configurar monitoramento e alertas (Prometheus, Grafana ou similar) para aplicações em execução?" },
-        { "id": "E09", "nivel": "senior", "texto": "Qual a sua experiência em orquestrar aplicações em produção com Kubernetes, incluindo escalabilidade e alta disponibilidade?" },
-        { "id": "E10", "nivel": "senior", "texto": "Qual a sua experiência em definir SLOs, conduzir resposta a incidentes e post-mortems e reduzir trabalho manual repetitivo?" }
-      ]
+        {
+          "id": "E01",
+          "nivel": "junior",
+          "skill": "Linux",
+          "texto": "Qual a sua experiência em administrar servidores Linux (permissões, processos, serviços e logs)?"
+        },
+        {
+          "id": "E02",
+          "nivel": "junior",
+          "skill": "Redes de computadores",
+          "texto": "Qual a sua experiência em configurar e diagnosticar redes (TCP/IP, DNS, HTTP, portas e firewalls)?"
+        },
+        {
+          "id": "E03",
+          "nivel": "junior",
+          "skill": "Git e GitHub",
+          "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?"
+        },
+        {
+          "id": "E04",
+          "nivel": "junior",
+          "skill": "Shell script",
+          "texto": "Qual a sua experiência em automatizar tarefas com scripts em Bash ou PowerShell?"
+        },
+        {
+          "id": "E05",
+          "nivel": "junior",
+          "skill": "Docker",
+          "texto": "Qual a sua experiência em criar imagens e executar aplicações em containers com Docker?"
+        },
+        {
+          "id": "E06",
+          "nivel": "junior",
+          "skill": "CI/CD",
+          "texto": "Qual a sua experiência em montar pipelines de integração e entrega contínua (GitHub Actions, GitLab CI ou Jenkins)?"
+        },
+        {
+          "id": "E07",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em provisionar infraestrutura como código (Terraform, Ansible ou similar)?"
+        },
+        {
+          "id": "E08",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em configurar monitoramento e alertas (Prometheus, Grafana ou similar) para aplicações em execução?"
+        },
+        {
+          "id": "E09",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em orquestrar aplicações em produção com Kubernetes, incluindo escalabilidade e alta disponibilidade?"
+        },
+        {
+          "id": "E10",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em definir SLOs, conduzir resposta a incidentes e post-mortems e reduzir trabalho manual repetitivo?"
+        }
+      ],
+      "estudos_por_competencia": {
+        "E01": [
+          "Linux"
+        ],
+        "E02": [
+          "Redes de computadores"
+        ],
+        "E03": [
+          "GitHub Actions"
+        ],
+        "E04": [
+          "Bash"
+        ],
+        "E05": [
+          "Docker"
+        ],
+        "E06": [
+          "GitHub Actions"
+        ]
+      }
     },
     "cloud_architecture": {
       "nome": "Cloud Architecture",
@@ -382,30 +1109,106 @@
         "Segurança em nuvem",
         "Python"
       ],
-      "tecnologias": ["AWS (EC2, S3, VPC, IAM)", "Azure", "Google Cloud", "Terraform", "Docker", "Serverless (Lambda)"],
-      "certificacoes": ["AWS Certified Cloud Practitioner", "AWS Certified Solutions Architect - Associate", "Microsoft Azure Fundamentals (AZ-900)"],
+      "tecnologias": [
+        "AWS (EC2, S3, VPC, IAM)",
+        "Azure",
+        "Google Cloud",
+        "Terraform",
+        "Docker",
+        "Serverless (Lambda)"
+      ],
+      "certificacoes": [
+        "AWS Certified Cloud Practitioner",
+        "AWS Certified Solutions Architect - Associate",
+        "Microsoft Azure Fundamentals (AZ-900)"
+      ],
       "projetos_portfolio": [
         "Site estático hospedado na nuvem com CDN e HTTPS, com diagrama de arquitetura",
         "Aplicação web em múltiplas camadas (balanceador, servidores e banco gerenciado)",
         "Arquitetura serverless (API Gateway, Lambda e banco) provisionada com Terraform"
       ],
       "avaliacao_nivel": [
-        { "id": "E01", "nivel": "junior", "skill": "Redes de computadores", "texto": "Qual a sua experiência em configurar e diagnosticar redes (TCP/IP, DNS, sub-redes e firewalls)?" },
-        { "id": "E02", "nivel": "junior", "skill": "Linux", "texto": "Qual a sua experiência em administrar servidores Linux pelo terminal?" },
+        {
+          "id": "E01",
+          "nivel": "junior",
+          "skill": "Redes de computadores",
+          "texto": "Qual a sua experiência em configurar e diagnosticar redes (TCP/IP, DNS, sub-redes e firewalls)?"
+        },
+        {
+          "id": "E02",
+          "nivel": "junior",
+          "skill": "Linux",
+          "texto": "Qual a sua experiência em administrar servidores Linux pelo terminal?"
+        },
         {
           "id": "E03",
           "nivel": "junior",
           "skill": "Fundamentos de computação em nuvem",
           "texto": "Qual a sua experiência em usar serviços básicos de nuvem (máquinas virtuais, armazenamento, redes e banco gerenciado) na AWS, Azure ou Google Cloud?"
         },
-        { "id": "E04", "nivel": "junior", "skill": "Git e GitHub", "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?" },
-        { "id": "E05", "nivel": "junior", "skill": "Docker", "texto": "Qual a sua experiência em criar imagens e executar aplicações em containers com Docker?" },
-        { "id": "E06", "nivel": "junior", "skill": "Arquitetura de sistemas", "texto": "Qual a sua experiência em desenhar a arquitetura de uma aplicação, com seus componentes, comunicação entre serviços e diagramas?" },
-        { "id": "E07", "nivel": "pleno", "texto": "Qual a sua experiência em provisionar e gerenciar recursos em nuvem com infraestrutura como código (Terraform ou similar)?" },
-        { "id": "E08", "nivel": "pleno", "texto": "Qual a sua experiência em aplicar boas práticas de segurança em nuvem (IAM, criptografia e segmentação de rede)?" },
-        { "id": "E09", "nivel": "senior", "texto": "Qual a sua experiência em desenhar arquiteturas altamente disponíveis e tolerantes a falhas, justificando as decisões e seus custos?" },
-        { "id": "E10", "nivel": "senior", "texto": "Qual a sua experiência em planejar a migração de sistemas para a nuvem e otimizar custos (FinOps)?" }
-      ]
+        {
+          "id": "E04",
+          "nivel": "junior",
+          "skill": "Git e GitHub",
+          "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?"
+        },
+        {
+          "id": "E05",
+          "nivel": "junior",
+          "skill": "Docker",
+          "texto": "Qual a sua experiência em criar imagens e executar aplicações em containers com Docker?"
+        },
+        {
+          "id": "E06",
+          "nivel": "junior",
+          "skill": "Arquitetura de sistemas",
+          "texto": "Qual a sua experiência em desenhar a arquitetura de uma aplicação, com seus componentes, comunicação entre serviços e diagramas?"
+        },
+        {
+          "id": "E07",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em provisionar e gerenciar recursos em nuvem com infraestrutura como código (Terraform ou similar)?"
+        },
+        {
+          "id": "E08",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em aplicar boas práticas de segurança em nuvem (IAM, criptografia e segmentação de rede)?"
+        },
+        {
+          "id": "E09",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em desenhar arquiteturas altamente disponíveis e tolerantes a falhas, justificando as decisões e seus custos?"
+        },
+        {
+          "id": "E10",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em planejar a migração de sistemas para a nuvem e otimizar custos (FinOps)?"
+        }
+      ],
+      "estudos_por_competencia": {
+        "E01": [
+          "AWS (EC2, S3, VPC, IAM)"
+        ],
+        "E02": [
+          "Linux"
+        ],
+        "E03": [
+          "AWS (EC2, S3, VPC, IAM)",
+          "Azure",
+          "Google Cloud"
+        ],
+        "E04": [
+          "Git e GitHub"
+        ],
+        "E05": [
+          "Docker"
+        ],
+        "E06": [
+          "AWS (EC2, S3, VPC, IAM)",
+          "Terraform",
+          "Serverless (Lambda)"
+        ]
+      }
     },
     "mobile": {
       "nome": "Mobile",
@@ -420,25 +1223,109 @@
         "Ciclo de vida de aplicativos",
         "Publicação em lojas"
       ],
-      "tecnologias": ["Kotlin e Jetpack Compose", "Swift e SwiftUI", "Flutter e Dart", "React Native", "Firebase", "SQLite"],
-      "certificacoes": ["Android Basics with Compose (Google)", "Meta React Native Specialization (Coursera)", "Curso oficial Develop in Swift (Apple)"],
+      "tecnologias": [
+        "Kotlin e Jetpack Compose",
+        "Swift e SwiftUI",
+        "Flutter e Dart",
+        "React Native",
+        "Firebase",
+        "SQLite"
+      ],
+      "certificacoes": [
+        "Android Basics with Compose (Google)",
+        "Meta React Native Specialization (Coursera)",
+        "Curso oficial Develop in Swift (Apple)"
+      ],
       "projetos_portfolio": [
         "Aplicativo de lista de tarefas com armazenamento local",
         "Aplicativo que consome uma API pública (ex: filmes ou clima) com tratamento de erros",
         "Aplicativo com login via Firebase, publicado em teste interno na loja"
       ],
       "avaliacao_nivel": [
-        { "id": "E01", "nivel": "junior", "skill": "Lógica de programação", "texto": "Qual a sua experiência em resolver problemas com estruturas de repetição, condicionais, funções e estruturas de dados?" },
-        { "id": "E02", "nivel": "junior", "skill": "Git e GitHub", "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?" },
-        { "id": "E03", "nivel": "junior", "skill": "Orientação a objetos", "texto": "Qual a sua experiência em modelar sistemas com classes, herança, encapsulamento e polimorfismo?" },
-        { "id": "E04", "nivel": "junior", "skill": "Kotlin ou Swift", "texto": "Qual a sua experiência em programar aplicativos nativos em Kotlin (Android) ou Swift (iOS), ou em Flutter e React Native?" },
-        { "id": "E05", "nivel": "junior", "skill": "Design de interfaces mobile", "texto": "Qual a sua experiência em criar telas para celular seguindo guias de design (Material Design ou Human Interface Guidelines)?" },
-        { "id": "E06", "nivel": "junior", "skill": "APIs REST", "texto": "Qual a sua experiência em consumir APIs REST em aplicativos, tratando JSON, erros e carregamento?" },
-        { "id": "E07", "nivel": "pleno", "texto": "Qual a sua experiência em gerenciar ciclo de vida, estado e navegação de aplicativos (ViewModel, Compose, SwiftUI ou equivalentes)?" },
-        { "id": "E08", "nivel": "pleno", "texto": "Qual a sua experiência em publicar aplicativos nas lojas (Google Play ou App Store), cuidando de assinatura, versões e revisão?" },
-        { "id": "E09", "nivel": "senior", "texto": "Qual a sua experiência em arquitetar aplicativos modulares (MVVM ou Clean Architecture) com testes automatizados e CI/CD?" },
-        { "id": "E10", "nivel": "senior", "texto": "Qual a sua experiência em otimizar desempenho, consumo de bateria e funcionamento offline e orientar outros desenvolvedores?" }
-      ]
+        {
+          "id": "E01",
+          "nivel": "junior",
+          "skill": "Lógica de programação",
+          "texto": "Qual a sua experiência em resolver problemas com estruturas de repetição, condicionais, funções e estruturas de dados?"
+        },
+        {
+          "id": "E02",
+          "nivel": "junior",
+          "skill": "Git e GitHub",
+          "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?"
+        },
+        {
+          "id": "E03",
+          "nivel": "junior",
+          "skill": "Orientação a objetos",
+          "texto": "Qual a sua experiência em modelar sistemas com classes, herança, encapsulamento e polimorfismo?"
+        },
+        {
+          "id": "E04",
+          "nivel": "junior",
+          "skill": "Kotlin ou Swift",
+          "texto": "Qual a sua experiência em programar aplicativos nativos em Kotlin (Android) ou Swift (iOS), ou em Flutter e React Native?"
+        },
+        {
+          "id": "E05",
+          "nivel": "junior",
+          "skill": "Design de interfaces mobile",
+          "texto": "Qual a sua experiência em criar telas para celular seguindo guias de design (Material Design ou Human Interface Guidelines)?"
+        },
+        {
+          "id": "E06",
+          "nivel": "junior",
+          "skill": "APIs REST",
+          "texto": "Qual a sua experiência em consumir APIs REST em aplicativos, tratando JSON, erros e carregamento?"
+        },
+        {
+          "id": "E07",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em gerenciar ciclo de vida, estado e navegação de aplicativos (ViewModel, Compose, SwiftUI ou equivalentes)?"
+        },
+        {
+          "id": "E08",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em publicar aplicativos nas lojas (Google Play ou App Store), cuidando de assinatura, versões e revisão?"
+        },
+        {
+          "id": "E09",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em arquitetar aplicativos modulares (MVVM ou Clean Architecture) com testes automatizados e CI/CD?"
+        },
+        {
+          "id": "E10",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em otimizar desempenho, consumo de bateria e funcionamento offline e orientar outros desenvolvedores?"
+        }
+      ],
+      "estudos_por_competencia": {
+        "E01": [
+          "Kotlin e Jetpack Compose",
+          "Swift e SwiftUI",
+          "Flutter e Dart"
+        ],
+        "E02": [
+          "Git e GitHub"
+        ],
+        "E03": [
+          "Kotlin e Jetpack Compose",
+          "Swift e SwiftUI"
+        ],
+        "E04": [
+          "Kotlin e Jetpack Compose",
+          "Swift e SwiftUI"
+        ],
+        "E05": [
+          "Kotlin e Jetpack Compose",
+          "Swift e SwiftUI",
+          "Flutter e Dart",
+          "React Native"
+        ],
+        "E06": [
+          "Firebase"
+        ]
+      }
     },
     "qa": {
       "nome": "QA (Qualidade de Software)",
@@ -453,25 +1340,104 @@
         "Testes automatizados",
         "Metodologias ágeis"
       ],
-      "tecnologias": ["Selenium", "Cypress", "Playwright", "Postman", "JUnit ou PyTest", "Jira"],
-      "certificacoes": ["ISTQB Certified Tester Foundation Level (CTFL)", "ISTQB Agile Tester", "Certificação em Cypress ou Selenium (cursos reconhecidos)"],
+      "tecnologias": [
+        "Selenium",
+        "Cypress",
+        "Playwright",
+        "Postman",
+        "JUnit ou PyTest",
+        "Jira"
+      ],
+      "certificacoes": [
+        "ISTQB Certified Tester Foundation Level (CTFL)",
+        "ISTQB Agile Tester",
+        "Certificação em Cypress ou Selenium (cursos reconhecidos)"
+      ],
       "projetos_portfolio": [
         "Plano de testes completo com casos de teste para um site de e-commerce real",
         "Suíte de testes automatizados end-to-end com Cypress ou Playwright",
         "Coleção de testes de API no Postman integrada a um pipeline de CI"
       ],
       "avaliacao_nivel": [
-        { "id": "E01", "nivel": "junior", "skill": "Fundamentos de teste de software", "texto": "Qual a sua experiência em aplicar fundamentos de teste (tipos e níveis de teste, partição de equivalência e análise de valor limite)?" },
-        { "id": "E02", "nivel": "junior", "skill": "Lógica de programação", "texto": "Qual a sua experiência em resolver problemas com estruturas de repetição, condicionais e funções?" },
-        { "id": "E03", "nivel": "junior", "skill": "Escrita de casos de teste e relatos de bugs", "texto": "Qual a sua experiência em escrever casos de teste claros e relatar bugs com passos para reprodução e evidências?" },
-        { "id": "E04", "nivel": "junior", "skill": "Git e GitHub", "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?" },
-        { "id": "E05", "nivel": "junior", "skill": "SQL", "texto": "Qual a sua experiência em consultar bancos de dados com SQL para validar dados durante os testes?" },
-        { "id": "E06", "nivel": "junior", "skill": "APIs REST", "texto": "Qual a sua experiência em testar APIs REST manualmente com Postman ou ferramenta similar?" },
-        { "id": "E07", "nivel": "pleno", "texto": "Qual a sua experiência em automatizar testes de interface ou de API (Selenium, Cypress, Playwright ou similar) e integrá-los a pipelines de CI?" },
-        { "id": "E08", "nivel": "pleno", "texto": "Qual a sua experiência em atuar em time ágil, definindo critérios de aceite e planejando testes a cada sprint?" },
-        { "id": "E09", "nivel": "senior", "texto": "Qual a sua experiência em definir a estratégia de qualidade de um produto (pirâmide de testes, métricas e análise de riscos)?" },
-        { "id": "E10", "nivel": "senior", "texto": "Qual a sua experiência em implementar testes de desempenho e segurança e orientar o time na cultura de qualidade?" }
-      ]
+        {
+          "id": "E01",
+          "nivel": "junior",
+          "skill": "Fundamentos de teste de software",
+          "texto": "Qual a sua experiência em aplicar fundamentos de teste (tipos e níveis de teste, partição de equivalência e análise de valor limite)?"
+        },
+        {
+          "id": "E02",
+          "nivel": "junior",
+          "skill": "Lógica de programação",
+          "texto": "Qual a sua experiência em resolver problemas com estruturas de repetição, condicionais e funções?"
+        },
+        {
+          "id": "E03",
+          "nivel": "junior",
+          "skill": "Escrita de casos de teste e relatos de bugs",
+          "texto": "Qual a sua experiência em escrever casos de teste claros e relatar bugs com passos para reprodução e evidências?"
+        },
+        {
+          "id": "E04",
+          "nivel": "junior",
+          "skill": "Git e GitHub",
+          "texto": "Qual a sua experiência em controlar versões de projetos com Git (commit, branch e merge) e publicá-los no GitHub?"
+        },
+        {
+          "id": "E05",
+          "nivel": "junior",
+          "skill": "SQL",
+          "texto": "Qual a sua experiência em consultar bancos de dados com SQL para validar dados durante os testes?"
+        },
+        {
+          "id": "E06",
+          "nivel": "junior",
+          "skill": "APIs REST",
+          "texto": "Qual a sua experiência em testar APIs REST manualmente com Postman ou ferramenta similar?"
+        },
+        {
+          "id": "E07",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em automatizar testes de interface ou de API (Selenium, Cypress, Playwright ou similar) e integrá-los a pipelines de CI?"
+        },
+        {
+          "id": "E08",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em atuar em time ágil, definindo critérios de aceite e planejando testes a cada sprint?"
+        },
+        {
+          "id": "E09",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em definir a estratégia de qualidade de um produto (pirâmide de testes, métricas e análise de riscos)?"
+        },
+        {
+          "id": "E10",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em implementar testes de desempenho e segurança e orientar o time na cultura de qualidade?"
+        }
+      ],
+      "estudos_por_competencia": {
+        "E01": [
+          "Selenium",
+          "Cypress",
+          "Playwright"
+        ],
+        "E02": [
+          "JUnit ou PyTest"
+        ],
+        "E03": [
+          "Jira"
+        ],
+        "E04": [
+          "Git e GitHub"
+        ],
+        "E05": [
+          "SQL"
+        ],
+        "E06": [
+          "Postman"
+        ]
+      }
     },
     "product_management": {
       "nome": "Product Management",
@@ -486,25 +1452,107 @@
         "Noções de UX",
         "Noções de SQL e análise de dados"
       ],
-      "tecnologias": ["Jira", "Notion", "Figma (leitura de protótipos)", "Miro", "Google Analytics", "Amplitude ou Mixpanel"],
-      "certificacoes": ["Professional Scrum Product Owner (PSPO I)", "Certified Scrum Product Owner (CSPO)", "Professional Scrum Master (PSM I)"],
+      "tecnologias": [
+        "Jira",
+        "Notion",
+        "Figma (leitura de protótipos)",
+        "Miro",
+        "Google Analytics",
+        "Amplitude ou Mixpanel"
+      ],
+      "certificacoes": [
+        "Professional Scrum Product Owner (PSPO I)",
+        "Certified Scrum Product Owner (CSPO)",
+        "Professional Scrum Master (PSM I)"
+      ],
       "projetos_portfolio": [
         "Estudo de caso de produto: problema, pesquisa com usuários, hipóteses e roadmap",
         "PRD (documento de requisitos) de um recurso novo para um app conhecido",
         "Backlog priorizado com critérios RICE e métricas de sucesso definidas"
       ],
       "avaliacao_nivel": [
-        { "id": "E01", "nivel": "junior", "skill": "Metodologias ágeis", "texto": "Qual a sua experiência em trabalhar com Scrum ou Kanban (cerimônias, papéis e quadro de tarefas)?" },
-        { "id": "E02", "nivel": "junior", "skill": "Descoberta de produto e pesquisa com usuários", "texto": "Qual a sua experiência em conduzir entrevistas e pesquisas com usuários para descobrir problemas e necessidades?" },
-        { "id": "E03", "nivel": "junior", "skill": "Escrita de user stories e backlog", "texto": "Qual a sua experiência em escrever user stories com critérios de aceite e manter um backlog organizado?" },
-        { "id": "E04", "nivel": "junior", "skill": "Priorização (RICE e MoSCoW)", "texto": "Qual a sua experiência em priorizar funcionalidades com métodos como RICE ou MoSCoW?" },
-        { "id": "E05", "nivel": "junior", "skill": "Métricas de produto", "texto": "Qual a sua experiência em definir e acompanhar métricas de produto (retenção, conversão e engajamento)?" },
-        { "id": "E06", "nivel": "junior", "skill": "Comunicação e facilitação", "texto": "Qual a sua experiência em facilitar reuniões, alinhar expectativas e apresentar decisões a diferentes públicos?" },
-        { "id": "E07", "nivel": "pleno", "texto": "Qual a sua experiência em acompanhar métricas e OKRs de um produto com ferramentas de análise (SQL, Amplitude ou Google Analytics)?" },
-        { "id": "E08", "nivel": "pleno", "texto": "Qual a sua experiência em gerenciar o roadmap e alinhar expectativas entre times técnicos, design e áreas de negócio?" },
-        { "id": "E09", "nivel": "senior", "texto": "Qual a sua experiência em definir a visão e a estratégia de um produto, ligando-as aos objetivos da empresa?" },
-        { "id": "E10", "nivel": "senior", "texto": "Qual a sua experiência em liderar ou mentorar outros gerentes de produto e decidir sobre investimento e descontinuação de funcionalidades?" }
-      ]
+        {
+          "id": "E01",
+          "nivel": "junior",
+          "skill": "Metodologias ágeis",
+          "texto": "Qual a sua experiência em trabalhar com Scrum ou Kanban (cerimônias, papéis e quadro de tarefas)?"
+        },
+        {
+          "id": "E02",
+          "nivel": "junior",
+          "skill": "Descoberta de produto e pesquisa com usuários",
+          "texto": "Qual a sua experiência em conduzir entrevistas e pesquisas com usuários para descobrir problemas e necessidades?"
+        },
+        {
+          "id": "E03",
+          "nivel": "junior",
+          "skill": "Escrita de user stories e backlog",
+          "texto": "Qual a sua experiência em escrever user stories com critérios de aceite e manter um backlog organizado?"
+        },
+        {
+          "id": "E04",
+          "nivel": "junior",
+          "skill": "Priorização (RICE e MoSCoW)",
+          "texto": "Qual a sua experiência em priorizar funcionalidades com métodos como RICE ou MoSCoW?"
+        },
+        {
+          "id": "E05",
+          "nivel": "junior",
+          "skill": "Métricas de produto",
+          "texto": "Qual a sua experiência em definir e acompanhar métricas de produto (retenção, conversão e engajamento)?"
+        },
+        {
+          "id": "E06",
+          "nivel": "junior",
+          "skill": "Comunicação e facilitação",
+          "texto": "Qual a sua experiência em facilitar reuniões, alinhar expectativas e apresentar decisões a diferentes públicos?"
+        },
+        {
+          "id": "E07",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em acompanhar métricas e OKRs de um produto com ferramentas de análise (SQL, Amplitude ou Google Analytics)?"
+        },
+        {
+          "id": "E08",
+          "nivel": "pleno",
+          "texto": "Qual a sua experiência em gerenciar o roadmap e alinhar expectativas entre times técnicos, design e áreas de negócio?"
+        },
+        {
+          "id": "E09",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em definir a visão e a estratégia de um produto, ligando-as aos objetivos da empresa?"
+        },
+        {
+          "id": "E10",
+          "nivel": "senior",
+          "texto": "Qual a sua experiência em liderar ou mentorar outros gerentes de produto e decidir sobre investimento e descontinuação de funcionalidades?"
+        }
+      ],
+      "estudos_por_competencia": {
+        "E01": [
+          "Jira",
+          "Notion"
+        ],
+        "E02": [
+          "Figma (leitura de protótipos)",
+          "Miro"
+        ],
+        "E03": [
+          "Jira",
+          "Notion"
+        ],
+        "E04": [
+          "Jira",
+          "Notion"
+        ],
+        "E05": [
+          "Google Analytics",
+          "Amplitude ou Mixpanel"
+        ],
+        "E06": [
+          "Miro"
+        ]
+      }
     }
   }
 }
